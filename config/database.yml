@@ -5,11 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   database: example
+
   username: example
   password: example
+
   reconnect: false
   pool: 25
 
@@ -27,5 +29,5 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  encoding: utf8
+  encoding: unicode
   url: <%= ENV['DATABASE_URL'] %>
