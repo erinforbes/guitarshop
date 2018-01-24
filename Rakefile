@@ -4,5 +4,3 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
-
-P.s. don't forget about setting up the config/database.yml
