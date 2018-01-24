@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  type: 
+  name: MyString
+  description: MyString
+  string_number: 1
+  left_handed: false
+  picture: MyString
+
+two:
+  title: MyString
+  type: 
+  name: MyString
+  description: MyString
+  string_number: 1
+  left_handed: false
+  picture: MyString

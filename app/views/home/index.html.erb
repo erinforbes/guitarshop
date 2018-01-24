@@ -1,0 +1,25 @@
+Hello
+
+<hr />
+
+<p> Hello to my guitar shop ?</p>
+
+<p>I have <%= @electric_guitars_count %> electric guitars in my shop</p>
+<p>I have <%= @classic_guitars_count %> classic <%= pluralize_without_count(@classic_guitars_count, 'guitar') %></p>
+<p>
+
+  <table>
+    <tr>
+      <td>Number</td>
+      <td>Guitar Name</td>
+      <td>Created at</td>
+    </tr>
+    <% @guitars_all.each_with_index do |guitar, index| %>
+      <tr>
+        <td><%= index +1 %></td>
+        <td><%= link_to(guitar.name, guitar_path(guitar)) %></td>
+        <td><%= guitar.created_at.to_formatted_s(:db) %></td>
+      </tr>
+    <% end %>
+  </table>
+</p>
