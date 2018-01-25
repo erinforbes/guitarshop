@@ -32,7 +32,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @guitar.picture %>
+  <%= image_tag @guitar.picture.url(:medium) %>
 </p>
 
 <%= link_to 'Edit', edit_guitar_path(@guitar) %> |

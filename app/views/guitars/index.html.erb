@@ -25,7 +25,7 @@
         <td><%= guitar.description %></td>
         <td><%= guitar.string_number %></td>
         <td><%= guitar.left_handed %></td>
-        <td><%= guitar.picture %></td>
+        <td><%= image_tag guitar.picture.url(:medium) %></td>
         <td><%= link_to 'Show', guitar %></td>
         <td><%= link_to 'Edit', edit_guitar_path(guitar) %></td>
         <td><%= link_to 'Destroy', guitar, method: :delete, data: { confirm: 'Are you sure?' } %></td>

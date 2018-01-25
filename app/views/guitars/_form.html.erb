@@ -1,4 +1,4 @@
-<%= form_for(@guitar) do |f| %>
+<%= form_for(@guitar, html: { multipart: true }) do |f| %>
   <% if @guitar.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@guitar.errors.count, "error") %> prohibited this guitar from being saved:</h2>
@@ -37,7 +37,11 @@
   </div>
   <div class="field">
     <%= f.label :picture %><br>
-    <%= f.text_field :picture %>
+    <%= f.file_field :picture, as: :file %>
+  </div>
+  <div class="field">
+    <%#= f.label :picture %><br>
+    <%#= f.text_field :picture %>
   </div>
   <div class="actions">
     <%= f.submit %>
